@@ -1,20 +1,17 @@
+%define upstream_name    Safe
+%define upstream_version 2.17
 
-%define realname   Safe
-%define version    2.16
-%define release    %mkrel 2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
+License:    GPL+ or Artistic
 Group:      Development/Perl
 Summary:    Restrict eval'd code to safe subset of ops
-Source:     http://www.cpan.org/modules/by-module//%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+Source0:    http://www.cpan.org/modules/by-module/Safe/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        http://search.cpan.org/dist/%{upstream_name}
 
-
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 BuildArch: noarch
 
 %description
@@ -28,7 +25,7 @@ code can be evaluated. Each compartment has
   outside this namespace, even with run-time glob lookups and other tricks.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -49,5 +46,4 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 
