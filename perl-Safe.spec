@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
@@ -11,8 +11,8 @@ Summary:    Restrict eval'd code to safe subset of ops
 Source0:    http://www.cpan.org/modules/by-module/Safe/%{upstream_name}-%{upstream_version}.tar.gz
 Url:        http://search.cpan.org/dist/%{upstream_name}
 
+BuildRequires: perl-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
-BuildArch: noarch
 
 %description
 The Safe extension module allows the creation of compartments in which perl
