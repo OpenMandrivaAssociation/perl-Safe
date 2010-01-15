@@ -1,5 +1,5 @@
 %define upstream_name    Safe
-%define upstream_version 2.20
+%define upstream_version 2.21
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
