@@ -1,9 +1,9 @@
 %define upstream_name    Safe
-%define upstream_version 2.27
+%define upstream_version 2.29
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
