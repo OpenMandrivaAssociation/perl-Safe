@@ -1,14 +1,14 @@
 %define modname	Safe
-%define modver	2.29
+%define modver 2.35
 
 Summary:	Restrict eval'd code to safe subset of ops
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Safe/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Safe/Safe-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 
@@ -39,4 +39,5 @@ make test
 %doc Changes README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+
 
